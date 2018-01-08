@@ -1,14 +1,23 @@
-<h1>hw {{name}}</h1>
+<h1>{{name}}</h1>
 
 <ul>
   <li>Age: {{age}}</li>
   <li>Location: {{location}} </li>
 </ul>
 
-<h1>hobbies</h1>
+<button (click)="onClick()">Click Me</button>
 
+<h1>hobbies</h1>
+<form (submit)="addHobby(hobby.value)">
+  <div>
+    <label for="hobby">Hobby:</label>
+    <input type="text" #hobby>
+  </div>
+</form>
 <ul>
-  <li *ngFor="let hobby of hobbies; let i = index">{{i + 1}}: {{hobby}}</li>
+  <li *ngFor="let hobby of hobbies; let i = index">
+    {{i + 1}}: {{hobby}} <button (click)="deleteHobby(hobby)">X</button>
+  </li>
 </ul>
 
 
