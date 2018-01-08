@@ -1,1 +1,14 @@
 <h1>hw {{name}}</h1>
+
+<ul>
+  <li>Age: {{age}}</li>
+  <li>Location: {{location}} </li>
+</ul>
+
+<h1>hobbies</h1>
+
+<ul>
+  <li *ngFor="let hobby of hobbies; let i = index">{{i + 1}}: {{hobby}}</li>
+</ul>
+
+
