@@ -7,6 +7,22 @@
 
 <button (click)="onClick()">Click Me</button>
 
+<h1>Edit User</h1>
+<form>
+  <div>
+    <label for="name">Name: </label>
+    <input type="text" [(ngModel)]="name" name="name">
+  </div>
+  <div>
+    <label for="age">Age: </label>
+    <input type="number" [(ngModel)]="age" name="age">
+  </div>
+  <div>
+    <label for="location">Location: </label>
+    <input type="text" [(ngModel)]="location" name="location">
+  </div>
+</form>
+
 <h1>hobbies</h1>
 <form (submit)="addHobby(hobby.value)">
   <div>

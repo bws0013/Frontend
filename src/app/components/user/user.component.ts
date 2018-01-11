@@ -24,7 +24,7 @@ export class UserComponent implements OnInit {
   }
 
   onClick() {
-    this.name = 'is this the real life';
+    // this.name = 'is this the real life';
     this.hobbies.push('new hobby');
   }
 
