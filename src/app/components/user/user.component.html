@@ -24,7 +24,7 @@
 </form>
 
 <h1>hobbies</h1>
-<form (submit)="addHobby(hobby.value)">
+<form #myForm="ngForm" (submit)="addHobby(hobby.value); myForm.reset()">
   <div>
     <label for="hobby">Hobby:</label>
     <input type="text" #hobby>

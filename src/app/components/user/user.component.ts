@@ -30,6 +30,7 @@ export class UserComponent implements OnInit {
 
   addHobby(hobby) {
     this.hobbies.unshift(hobby);
+    hobby = '';
     return false;
   }
 
@@ -40,5 +41,9 @@ export class UserComponent implements OnInit {
       }
     }
   }
+
+  // resetForm() {
+  //   this.form.resetForm;
+  // }
 
 }
