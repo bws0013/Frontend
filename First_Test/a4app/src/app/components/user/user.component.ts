@@ -13,6 +13,8 @@ export class UserComponent implements OnInit {
 
   hobbies: string[];
 
+  myForm: Form;
+
   constructor() { }
 
   ngOnInit() {
@@ -21,6 +23,7 @@ export class UserComponent implements OnInit {
     this.location = 'tuvalu';
 
     this.hobbies = ['fishing', 'golfing', 'coding'];
+    this.myForm.thing = 'hello';
   }
 
   onClick() {
@@ -30,7 +33,6 @@ export class UserComponent implements OnInit {
 
   addHobby(hobby) {
     this.hobbies.unshift(hobby);
-    hobby = '';
     return false;
   }
 
@@ -42,8 +44,8 @@ export class UserComponent implements OnInit {
     }
   }
 
-  // resetForm() {
-  //   this.form.resetForm;
-  // }
+}
 
+interface Form {
+  thing: string;
 }
